@@ -70,9 +70,7 @@ p {
   background-color: #000;
   color: #fff;
   position: fixed;
-width: 100%;
-z-index: 20;
-
+  width: 100%;
 }
 .header-logo {
   background-color: #000;
@@ -133,12 +131,11 @@ z-index: 20;
 }
 /* HERO STYLES */
 .full-hero {
-  position: relative
   background-color: #c7dbfc;
-  background-size:cover;
+  background-size: cover;
   box-sizing: border-box;
-  height: 100vh;
-  padding-top: 10vh;
+  height: 90vh;
+}
 
 }
 .full-hero:after {
@@ -261,8 +258,10 @@ h2 ~ p {
   text-align: center;
 }
 .home-callout {
+  align-items: center;
   background-color: #000;
   color: #fff;
+  display: flex;
   padding: 7vh 0;
 }
 .callout-title {
@@ -289,3 +288,14 @@ h2 ~ p {
 .footer h3 span {
   color: #aaa;
 }
+.body {
+  display: flex;
+  flex-direction: column;
+  font-family: helvetica, arial;
+  min-height: 100vh;
+}
+.content-container {
+   flex-grow: 1;
+   padding-top: 10vh;
+   width: 100%;
+ }
