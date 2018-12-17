@@ -20,10 +20,6 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
-body {
-  font-family: helvetica, arial, sans;
-  line-height: 1;
-}
 blockquote, q {
   quotes: none;
 }
@@ -64,6 +60,7 @@ a {
 }
 p {
   line-height: 1.5;
+    margin: 0.75em 0;
 }
 /* HEADER STYLES */
 .header {
@@ -258,19 +255,27 @@ h2 ~ p {
   text-align: center;
 }
 .home-callout {
-  align-items: center;
-  background-color: #000;
-  color: #fff;
-  display: flex;
-  padding: 7vh 0;
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    padding: 7vh 0;
+}
+.home-callout h3 {
+  color: inherit;
+  margin-top: 1em;
 }
 .callout-title {
+  flex: 1;
   font-size: 5.75vw;
   text-align: right;
   text-transform: uppercase;
 }
 .callout-copy {
+  flex: 0 0 45em;
+  padding: 0 3vw;
   font-size: 0.8rem;
+
 }
 .footer {
   background-color: #000;
@@ -288,14 +293,36 @@ h2 ~ p {
 .footer h3 span {
   color: #aaa;
 }
-.body {
+body {
   display: flex;
   flex-direction: column;
   font-family: helvetica, arial;
   min-height: 100vh;
+  line-height: 1;
 }
 .content-container {
-   flex-grow: 1;
-   padding-top: 10vh;
+   display: flex;
+   flex: 1 1 auto;
+   padding-top: 12vh;
    width: 100%;
  }
+ .col-three {
+   display: flex;
+   flex: 1;
+ }
+ .col {
+  box-sizing: border-box;
+  padding: 2em;
+}
+.col-three .col ~ .col {
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+.col-three .col-nav {
+  flex: 0 1 15em;
+}
+.col-three .col-content {
+  flex: 1;
+}
+.col-three .col-aside {
+  flex: 0 1 20em
+}
